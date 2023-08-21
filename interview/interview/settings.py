@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t8eyjt^l8n8mx*01tpcz8og$(gyw)joo6n55$psy2934yd@c66'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -83,16 +83,27 @@ WSGI_APPLICATION = 'interview.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'yourdbname',
-        'USER': 'yourdbuser',
-        'PASSWORD': 'yourdbpassword',
-        'HOST': 'db',  # Use your MySQL server hostname
-        'PORT': '3306',           # Use the MySQL server port if different from default (3306)
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'yourdbname',
+            'USER': 'yourdbuser',
+            'PASSWORD': 'yourdbpassword',
+            'HOST': 'db',  # Use your MySQL server hostname
+            'PORT': '3306',           # Use the MySQL server port if different from default (3306)
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'OPTIONS': {
+                'read_default_file': '/etc/mysql/my.cnf',
+            },
+        }
+    }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
