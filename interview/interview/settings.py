@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-t8eyjt^l8n8mx*01tpcz8og$(gyw)joo6n55$psy2934yd@c66
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    'localhost',
+    'interview.microepay.com',
+    '31.172.83.205'
+]
 
 
 # Application definition
