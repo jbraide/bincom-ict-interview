@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling Unit Detail</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Polling Unit Detail</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Polling Unit ID: {{ polling_unit.polling_unit_id }}</h5>
+                <p class="card-text"><strong>Ward ID:</strong> {{ polling_unit.ward_id }}</p>
+                <p class="card-text"><strong>LGA ID:</strong> {{ polling_unit.lga_id }}</p>
+                <p class="card-text"><strong>Polling Unit Number:</strong> {{ polling_unit.polling_unit_number }}</p>
+                <p class="card-text"><strong>Polling Unit Name:</strong> {{ polling_unit.polling_unit_name }}</p>
+            </div>
+        </div>
+        <a href="{% url 'election_data:polling-units' %}" class="btn btn-primary mt-3">Back to Polling Units</a>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
