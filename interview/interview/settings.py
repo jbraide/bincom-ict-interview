@@ -103,9 +103,11 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'OPTIONS': {
-                'read_default_file': '/etc/mysql/my.cnf',
-            },
+            'NAME': 'yourdbname',
+            'USER': 'yourdbuser',
+            'PASSWORD': 'yourdbpassword',
+            'HOST': 'localhost',  # Use your MySQL server hostname
+            'PORT': '3306',           # Use the MySQL server port if different from default (3306)
         }
     }
 
