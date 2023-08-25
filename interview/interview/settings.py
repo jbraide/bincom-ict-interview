@@ -106,7 +106,7 @@ else:
             'NAME': 'yourdbname',
             'USER': 'yourdbuser',
             'PASSWORD': 'yourdbpassword',
-            'HOST': '31.172.83.205',  # Use your MySQL server hostname
+            'HOST': 'localhost',  # Use your MySQL server hostname
             'PORT': '3306',           # Use the MySQL server port if different from default (3306)
         }
     }
