@@ -101,15 +101,14 @@ if DEBUG:
     }
 else:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'yourdbname',
-            'USER': 'yourdbuser',
-            'PASSWORD': 'yourdbpassword',
-            'HOST': '31.172.83.205',  # Use your MySQL server hostname
-            'PORT': '3306',           # Use the MySQL server port if different from default (3306)
-        }
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "OPTIONS": {
+            "read_default_file": "/home/microepay/interview/my.cnf",
+        },
     }
+}
+
 
 
 # Password validation
