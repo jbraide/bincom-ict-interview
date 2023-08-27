@@ -104,7 +104,7 @@ else:
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "OPTIONS": {
-            "read_default_file": "/home/microepay/interview/my.cnf",
+            "read_default_file": "/home/micro-epay/interview/my.cnf",
         },
     }
 }
